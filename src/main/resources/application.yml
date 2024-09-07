@@ -12,4 +12,4 @@ spring:
     name: dropbox
 
 file:
-  upload-dir: /Users/rrauniyar/Documents/dropbox/src/main/resources/
+  upload-dir: /Users/rishav/Documents/dropbox/src/main/resources/
