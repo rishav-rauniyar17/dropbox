@@ -1,7 +1,6 @@
 package com.assignment.dropbox.controller;//package com.assignment.dropbox.controller;
 
 
-
 import com.assignment.dropbox.dto.FileUploadResponseDto;
 import com.assignment.dropbox.entity.FileEntity;
 import com.assignment.dropbox.service.FileService;
@@ -44,7 +43,6 @@ public class FileController {
     }
 
 
-
     @PutMapping("/{fileId}")
     public ResponseEntity<FileUploadResponseDto> updateMetadata(
             @PathVariable Long fileId,
@@ -60,8 +58,6 @@ public class FileController {
                     .body(new FileUploadResponseDto("Error", "Failed to update file metadata", null));
         }
     }
-
-
 
 
     @GetMapping("/{fileId}")
@@ -82,7 +78,6 @@ public class FileController {
                     .body(null);
         }
     }
-
 
 
     @GetMapping
