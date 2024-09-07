@@ -8,6 +8,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,9 +21,9 @@ import java.util.Optional;
 @Service
 public class FileService {
 
+    private final FileRepository fileRepository;
     @Value("${file.upload-dir}")
     private String uploadDir;
-    private final FileRepository fileRepository;
 
     public FileService(FileRepository fileRepository) {
         this.fileRepository = fileRepository;
@@ -118,7 +119,6 @@ public class FileService {
 
         return new FileUploadResponseDto("Success", "File metadata updated successfully", fileEntity.getId());
     }
-
 
 
     @Transactional
